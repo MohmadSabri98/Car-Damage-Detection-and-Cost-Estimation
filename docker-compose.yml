@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./best.pt:/app/best.pt:ro
+      - ./inference_api.py:/app/inference_api.py:ro
+    environment:
+      - MODEL_PATH=best.pt
+      - CONFIDENCE=0.25
+      - HOST=0.0.0.0
+      - PORT=8001
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    # Uncomment above if using GPU
+

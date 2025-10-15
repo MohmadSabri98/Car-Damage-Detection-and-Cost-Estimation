@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model weights (don't commit large files)
+*.pt
+*.pth
+*.weights
+*.onnx
+
+# Training outputs
+runs/
+wandb/
+*.log
+
+# Dataset (don't commit large datasets)
+carDamagedDataSet/
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Keep only data.yaml from dataset
+!carDamagedDataSet/data.yaml
+
+# Temporary files
+data_local.yaml
+*.tmp
+*.bak
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Test outputs
+test_results/
+inference_results/
+output/
+
+# Frontend (React app) - Include source code, exclude build files
+car-damage-react/node_modules/
+car-damage-react/dist/
+car-damage-react/build/
+car-damage-react/.vite/
+car-damage-react/*.local
+car-damage-react/npm-debug.log*
+car-damage-react/yarn-debug.log*
+car-damage-react/yarn-error.log*
+car-damage-react/pnpm-debug.log*
+
+# General node_modules (if any other JS projects)
+node_modules/

@@ -26,6 +26,7 @@
 - [Quick Start](#-quick-start)
 - [Usage](#-usage)
 - [API Documentation](#-api-documentation)
+- [Frontend (React App)](#-frontend-react-app)
 - [Training Your Own Model](#-training-your-own-model)
 - [Project Structure](#-project-structure)
 - [Configuration](#-configuration)
@@ -370,6 +371,57 @@ FastAPI provides automatic interactive API documentation:
 
 ---
 
+## 🎨 Frontend (React App)
+
+A modern React web application is included for easy interaction with the API.
+
+### Features
+
+- 📸 **Drag & Drop Upload** - Easy image upload interface
+- 🔍 **Real-time Detection** - Instant damage detection results
+- 💰 **Visual Cost Breakdown** - Detailed repair cost estimation
+- 📊 **Damage Report** - Comprehensive list of detected damages
+- 🎨 **Responsive Design** - Works on desktop, tablet, and mobile
+- 🖼️ **Annotated Images** - View damage segmentation overlays
+
+### Setup & Run
+
+```bash
+# Navigate to frontend directory
+cd car-damage-react
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will start at: **http://localhost:5173**
+
+### Production Build
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Configuration
+
+Make sure the backend API is running and update the API endpoint if needed:
+
+```javascript
+// Default API endpoint
+const API_URL = "http://localhost:8001/infer";
+```
+
+**📖 Full frontend documentation**: [car-damage-react/README.md](car-damage-react/README.md)
+
+---
+
 ## 🏋️ Training Your Own Model
 
 ### Prepare Dataset
@@ -468,8 +520,14 @@ car_damage_final/
 │           └── weights/
 │               └── best.pt
 │
-└── 📁 car-damage-react/       # React frontend (ignored)
-    └── src/
+└── 📁 car-damage-react/       # React frontend
+    ├── src/
+    │   ├── components/
+    │   ├── App.jsx
+    │   └── main.jsx
+    ├── package.json
+    ├── vite.config.js
+    └── README.md
 ```
 
 ---

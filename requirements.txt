@@ -1,0 +1,20 @@
+# Core dependencies
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=10.0.0
+
+# FastAPI and server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Additional utilities
+pyyaml>=6.0
+pydantic>=2.0.0
+requests>=2.31.0
+
+# Optional: For better performance
+# torch>=2.0.0  # Install separately based on your CUDA version
+# torchvision>=0.15.0
+
